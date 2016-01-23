@@ -2,7 +2,7 @@
 
 ###Projects I've done for school:
 - Bank - (Demonstrates Polymorphism in C++)
-- SimulatorMk2 - (CPU Scheduling Simulation)
+- CPU Scheduling Simulation - (Lambda functions and STL usage)
 
 ###Projects I've done in my spare time:
 - Project Euler Solutions ([https://projecteuler.net](http://projecteuler.net "Project Euler"))
