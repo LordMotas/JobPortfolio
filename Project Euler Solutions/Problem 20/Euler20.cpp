@@ -9,6 +9,8 @@ and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 
 Find the sum of the digits in the number 100!
 
+Perosonal Note: C++ cannot handle values as large as 100!, it must be done another way
+
 */
 
 #include <iostream>
