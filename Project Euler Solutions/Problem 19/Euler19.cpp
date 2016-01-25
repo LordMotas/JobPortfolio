@@ -1,5 +1,5 @@
 /*
-	Project Euler # 19
+	Project Euler #19
 	Problem Statement:
 
 	You are given the following information, but you may prefer to do some research for yourself.
