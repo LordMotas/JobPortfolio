@@ -1,20 +1,21 @@
 /*
-Project Euler #14
-Problem Statement:
+	Project Euler #14
+	Problem Statement:
 
-The following iterative sequence is defined for the set of positive integers:
+	The following iterative sequence is defined for the set of positive integers:
 
-n Å® n/2 (n is even)
-n Å® 3n + 1 (n is odd)
+	n Å® n/2 (n is even)
+	n Å® 3n + 1 (n is odd)
 
-Using the rule above and starting with 13, we generate the following sequence:
+	Using the rule above and starting with 13, we generate the following sequence:
 
-13 Å® 40 Å® 20 Å® 10 Å® 5 Å® 16 Å® 8 Å® 4 Å® 2 Å® 1
-It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+	13 Å® 40 Å® 20 Å® 10 Å® 5 Å® 16 Å® 8 Å® 4 Å® 2 Å® 1
+	It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. 
+	Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
 
-Which starting number, under one million, produces the longest chain?
+	Which starting number, under one million, produces the longest chain?
 
-NOTE: Once the chain starts the terms are allowed to go above one million.
+	NOTE: Once the chain starts the terms are allowed to go above one million.
 
 */
 
