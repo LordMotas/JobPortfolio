@@ -16,7 +16,7 @@
 #include <cmath>
 
 int main(){
-
+	std::cout << "Calculating Pythagorean Triples..." << std::endl;
 	for (int i = 0; i < 500; i++){
 		for (int j = 0; j < 500; j++){
 			for (int k = 0; k < 500; k++){
@@ -24,13 +24,13 @@ int main(){
 					if (i + j + k == 1000 && i < j && j < k){
 						std::cout << "Pythagorean Triple is: " << i << ", " << j << ", " << k << std::endl;
 						std::cout << "Product of the triple is: " << i*j*k << std::endl;
+						system("Pause");
+						return 0;
 					}
 				}
 			}
 		}
 
 	}
-
-	system("Pause");
 	return 0;
 }

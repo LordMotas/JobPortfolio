@@ -13,6 +13,7 @@
 
 int main(){
 	auto N = 10001;
+	std::cout << "Calculating prime numbers..." << std::endl;
 	for (int i = 2; N > 0; ++i){
 		bool  isPrime = true;
 		for (int j = 2; j < i; ++j){
@@ -24,7 +25,7 @@ int main(){
 		if (isPrime){
 			--N;
 			if (N == 0){
-				std::cout << i << std::endl;
+				std::cout << "The answer is: " << i << std::endl;
 			}
 		}
 	}
