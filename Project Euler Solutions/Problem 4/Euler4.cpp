@@ -6,6 +6,7 @@
 	from the product of two 2-digit numbers is 9009 = 91 Å~ 99.
 
 	Find the largest palindrome made from the product of two 3-digit numbers.
+	
 */
 
 #include <iostream>
@@ -23,10 +24,12 @@ int main(){
 
 	std::vector<int> palindrome(899);
 	auto i = 100;
+	std::cout << "Generating list of numbers to multiply..." << std::endl;
 	std::generate(palindrome.begin(), palindrome.end(), [&](){return i++; });
 	std::vector<int> solutions;
 	auto k = 0;
 
+	std::cout << "Checking palindromicity of products..." << std::endl;
 	for (int a = 898; a > 0; a--){
 		for (int b = 898; b > 0; b--){
 			if (ReverseNumber((palindrome[a] * palindrome[b])) == (palindrome[a] * palindrome[b])){
@@ -36,6 +39,7 @@ int main(){
 	}
 
 	auto trueSolution = 0;
+	std::cout << "Determining largest palindromic number..." << std::endl;
 	for (int j = 0; j < solutions.size(); j++){
 		if (solutions[j] > trueSolution){
 			trueSolution = solutions[j];

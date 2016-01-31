@@ -41,9 +41,11 @@ int main(){
 	date test;
 
 	int i = 1900;
+	std::cout << "Generating leap year dates..." << std::endl;
 	std::generate(leapYears.begin(), leapYears.end(), [&](){i++; if (i % 100 == 0 && i % 400 == 0) return i; if (i % 4 == 0) return i; return NULL; });
 
 	i = 1899;
+	std::cout << "Generating remaining dates..." << std::endl;
 	std::generate(allYears.begin(), allYears.end(), [&](){i++; return i;});
 
 	std::vector<int> leapYearList(25);
@@ -126,6 +128,7 @@ int main(){
 
 	int answer = 0;
 	
+	std::cout << "Summing the number of days..." << std::endl;
 	for (int i = 0; i < dateVector.size(); i++){
 		if (dateVector[i].dayOfMonth == 1 && dateVector[i].dayOfWeek == "Sunday" && dateVector[i].numYear > 1900)
 			answer++;

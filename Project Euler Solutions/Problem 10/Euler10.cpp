@@ -14,6 +14,7 @@ int main(){
 
 	auto N = 1000000;
 	long long int total = 0;
+	std::cout << "Calculating sum of all primes..." << std::endl;
 	for (int i = 2; N > 0; ++i){
 		bool  isPrime = true;
 		for (int j = 2; j < i; ++j){
@@ -30,7 +31,7 @@ int main(){
 		}
 	}
 
-	std::cout << "Solution is: " << total << std::endl;
+	std::cout << "The answer is: " << total << std::endl;
 	system("Pause)");
 	return 0;
 }

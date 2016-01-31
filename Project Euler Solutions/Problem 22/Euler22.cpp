@@ -87,6 +87,7 @@ int main(){
 	std::vector<std::string> nameArray;
 	std::ifstream fin;
 	fin.open("names.txt");
+	std::cout << "Extracting data from file..." << std:endl;
 	while (fin)
 	{
 		std::string s;
@@ -103,9 +104,11 @@ int main(){
 	fin.close();
 	
 	//Sort the array alphabetically
+	std::cout << "Sorting names in file..." << std::endl;
 	std::sort(nameArray.begin(), nameArray.end());
 
 	std::string name;
+	std::cout << "Calculating name scores..." << std::endl;
 	for (int i = 0; i < nameArray.size(); i++){
 		name = nameArray[i];
 		int alphabetTotal = 0;

@@ -217,6 +217,7 @@ int main(){
 
 	std::vector<int> solution;
 	auto sum = 0;
+	std::cout << "Summing individual columns..." << std::endl;
 	for (int j = 49; j >= 0; j--){
 		for (int i = 0; i < 100; i++){
 			sum += mass[i][j] - '0';
@@ -224,16 +225,10 @@ int main(){
 		solution.push_back(sum);
 		sum = 0;
 	}
-	//It adds up the columns just fine
-	/*for (int i = 0; i < solution.size(); i++){
-		std::cout << solution[i] << std::endl;
-	}*/
 
-	//Filter through solution to get the carry over...
-	//This won't work because you get negative vector size
 	int first2[2];
+	std::cout << "Locating first ten digits..." << std::endl;
 	for (int i = 0; i < solution.size(); i++){
-
 		auto remainder = solution[i] % 10;
 		auto carry = (solution[i] - remainder) / 10;
 		solution[i] = remainder;

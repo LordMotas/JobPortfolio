@@ -27,11 +27,13 @@ int main(){
 
 	std::vector<long long> collatz(1000000);
 	auto i = 1000000;
+	std::cout << "Filling array with data..." << std::endl;
 	std::generate(collatz.begin(), collatz.end(), [&](){return i--; });
 	
 	auto chainMax = 0;
 	long long answer;
 
+	std::cout << "Calculating size of chain..." << std::endl;
 	for (int i = 0; i < collatz.size(); i++){
 		bool cont = true;
 		auto count = 1;
@@ -42,7 +44,6 @@ int main(){
 				if (count > chainMax && count < 1000000){
 					chainMax = count;
 					answer = temp;
-					//std::cout << chainMax << " " << answer << std::endl;
 				}
 			}
 			else if (collatz[i] % 2 == 0){
@@ -58,7 +59,7 @@ int main(){
 		}
 	}
 
-	std::cout << "The solution is: " << answer << std::endl;
+	std::cout << "The answer is: " << answer << std::endl;
 
 	system("Pause");
 	return 0;

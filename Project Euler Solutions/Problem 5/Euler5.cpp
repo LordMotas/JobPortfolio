@@ -6,6 +6,7 @@
 	1 to 10 without any remainder.
 
 	What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+
 */
 
 #include <iostream>
@@ -15,6 +16,7 @@ int main(){
 	int i = 2520;
 	bool cont = true;
 
+	std::cout << "Checking all possible numbers that satisfy divisibility requirements..." << std::endl;
 	while (cont == true){
 		if (i % 1 == 0 && i % 2 == 0 && i % 3 == 0 && i % 4 == 0 &&
 			i % 5 == 0 && i % 6 == 0 && i % 7 == 0 && i % 8 == 0 &&

@@ -21,18 +21,17 @@
 	What is the value of the first triangle number to have over five hundred divisors?
 
 	WARNING: This program takes a long time to run...but the answer is: 76576500
+	
 */
 
 #include <iostream>
-#include <vector>
 #include <algorithm>
 
 int main(){
-
-	//std::vector<long long> triangle(100000);
 	long long sum = 0;
 	auto check = 0;
 
+	std::cout << "Calculating number of divisors..." << std::endl;
 	for (long long i = 0; i <= 100000; i++){
 		sum += i;
 		auto count = 0;
@@ -41,7 +40,6 @@ int main(){
 				count++;
 				if (count > check){
 					check = count;
-					std::cout << "c: " << check << std::endl;
 				}
 				if (count >= 500){
 					std::cout << "The solution is: " << sum << std::endl;

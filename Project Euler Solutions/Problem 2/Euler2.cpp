@@ -17,24 +17,23 @@
 #include <vector>
 #include <algorithm>
 
-long long
-FibonacciElement(long long n)
-{
+long long FibonacciElement(long long n){
 	if (n == 0) return 0;
 	if (n == 1) return 1;
 	return FibonacciElement(n - 2) + FibonacciElement(n - 1);
 }
 
 int main(){
-
 	auto i = 0;
 	auto answer = 0;
 	std::vector<int> fibSeq(34);
 
+	std::cout << "Filling array with Fibonacci numbers..." << std::endl;
 	std::generate(fibSeq.begin(), fibSeq.end(), [&](){return FibonacciElement(i++); });
 
 	auto j = 0;
 	auto total = 0;
+	std::cout << "Finding numbers that are even..." << std::endl;
 	for (int j = 0; j < 34; j++){
 		//std::cout << fibSeq[j] << std::endl;
 		if (fibSeq[j] % 2 == 0){
@@ -42,7 +41,7 @@ int main(){
 		}
 	}
 
-	std::cout << "Total Sum of all even numbers below 4 million is: " << total << std::endl;
+	std::cout << "The answer is: " << total << std::endl;
 
 	system("Pause");
 	return 0;

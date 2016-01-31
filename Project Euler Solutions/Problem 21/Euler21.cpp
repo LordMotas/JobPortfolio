@@ -23,16 +23,9 @@ int main(){
 	std::vector<int> divisorArray;
 	int finalTotal = 0;
 	std::vector<int> answerArray;
-	
-	//Steps:
-	//1. go from k=1 to k=10000
-	//2. For each number, check to see what their proper divisors are
-	//3. Add up the proper divisors
-	//4. Perform steps 2 and 3 for the sum of divisors
-	//5. If the resulting number is the first number, store both of them into an array
-	//6. Add up all the numbers in the new array
-	
+		
 	//Every number from 1 to 10000
+	std::cout << "Finding divisors..." << std::endl;
 	for (int k = 1; k < 10000; k++){
 		for (int l = 1; l < k; l++){
 			//If l is a proper divisor of k
@@ -71,6 +64,7 @@ int main(){
 	}
 
 	//Sum all elements of the array
+	std::cout << "Summing amicable numbers..." << std::endl;
 	for (int a : answerArray)
 		finalTotal += a;
 

@@ -28,6 +28,7 @@ int main(){
 
 	std::string final = "";
 
+	std::cout << "Calculating words from 1 to 1000..." << std::endl;
 	for (int k = 0; k < hundreds.size(); k++){
 		for (int j = 0; j < tens.size(); j++){
 			if (k > 0){

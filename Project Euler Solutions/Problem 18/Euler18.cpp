@@ -33,6 +33,7 @@
 	NOTE: As there are only 16384 routes, it is possible to solve this problem by trying every route. 
 	However, Problem 67, is the same challenge with a triangle containing one-hundred rows; it cannot 
 	be solved by brute force, and requires a clever method!
+	
 */
 
 #include <iostream>
@@ -49,6 +50,7 @@ int main(){
 	std::array<int, 15> rows[15];
 	//Read in rows from a file
 
+	std::cout << "Opening file of data..." << std::endl;
 	std::fstream fin;
 	fin.open("problem-18-data.txt", std::ios::out | std::ios::in);
 
@@ -62,6 +64,7 @@ int main(){
 		}
 		i++;
 	}
+	std::cout << "Traversing triangle..." << std::endl;
 	auto answer = recSumAtRow(rows, rows[size].size()-2);
 
 	std::cout << "The answer is: " << answer << std::endl;

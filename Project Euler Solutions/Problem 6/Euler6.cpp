@@ -13,6 +13,7 @@
 
 	Find the difference between the sum of the squares of the first one hundred 
 	natural numbers and the square of the sum.
+	
 */
 
 #include <iostream>
@@ -21,9 +22,11 @@ int main(){
 
 	auto sumOfSqrs = 0;
 	auto sqrOfSums = 0;
+	std::cout << "Calculating the sum of squares..." << std::endl;
 	for (int i = 0; i <= 100; i++){
 		sumOfSqrs += pow(i, 2);
 	}
+	std::cout << "Calculating the square of sums..." << std::endl;
 	for (int j = 0; j <= 100; j++){
 		sqrOfSums += j;
 	}
@@ -31,7 +34,7 @@ int main(){
 
 	std::cout << "The Sum of Squares is: " << sumOfSqrs << std::endl;
 	std::cout << "The Square of Sums is: " << sqrOfSums << std::endl;
-	std::cout << "The difference is: " << abs(sumOfSqrs - sqrOfSums) << std::endl;
+	std::cout << "The answer is: " << abs(sumOfSqrs - sqrOfSums) << std::endl;
 
 	system("Pause");
 	return 0;
