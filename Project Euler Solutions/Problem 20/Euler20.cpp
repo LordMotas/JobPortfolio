@@ -219,12 +219,6 @@ int main(){
 
 	number.total();
 
-	//auto answer = factorial(100);
-	
-	//std::cout << "The answer is: " << answer.showData() << std::endl;
-
-
-
 	system("Pause");
 	return 0;
 }
