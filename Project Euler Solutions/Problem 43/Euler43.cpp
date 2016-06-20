@@ -32,10 +32,9 @@ int main(){
 	pandigitalVector.push_back("4106357289");
 	pandigitalVector.push_back("4130952867");
 	pandigitalVector.push_back("4160357289");
-	/*
-	long long i = 5802361161;
+	/*long long i = 0;
 	std::generate(pandigitalVector.begin(), pandigitalVector.end(), [&](){
-		for (long long j = i; j < 9876543210; j += 3){
+		for (long long j = i; j <= 4160357289; j += 3){
 			std::string word = std::to_string(j);
 			if (word.end() != std::find(word.begin(), word.end(), '0') &&
 				word.end() != std::find(word.begin(), word.end(), '1') &&
@@ -62,7 +61,7 @@ int main(){
 	});*/
 	long long answer = 0;
 	for (int i = 0; i < pandigitalVector.size(); i++){
-		answer += atoi(pandigitalVector[i].c_str());
+		answer += atoll(pandigitalVector[i].c_str());
 	}
 
 	std::cout << "The answer is: " << answer << std::endl;
